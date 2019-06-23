@@ -1,3 +1,17 @@
+GIT
+  remote: git@github.com:Wolfpack-Digital/offsite_payments.git
+  revision: 83411339fe2501167b6a14f839c059af4cc1feb2
+  ref: 83411339fe2501167b6a14f839c059af4cc1feb2
+  specs:
+    offsite_payments (2.7.13)
+      actionpack (>= 5.2.3)
+      actionview (>= 5.1.6.2)
+      active_utils (~> 3.3.0)
+      activesupport (>= 5.2.3)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (>= 0.6.6)
+      nokogiri (>= 1.8.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -24,6 +38,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_utils (3.3.16)
+      activesupport (>= 4.2)
+      i18n
     activejob (5.2.3)
       activesupport (= 5.2.3)
       globalid (>= 0.3.6)
@@ -74,6 +91,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    dotenv (2.7.2)
+    dotenv-rails (2.7.2)
+      dotenv (= 2.7.2)
+      railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.11.1)
@@ -155,6 +176,7 @@ GEM
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
+    shopify-money (0.12.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -196,13 +218,16 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  offsite_payments!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
+  shopify-money
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

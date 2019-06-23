@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   resources :orders
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope 'global_payments' do
+    post 'paid'    => 'global_payments#paid',    as: :global_payments_paid
+    post 'success' => 'global_payments#success', as: :global_payments_success
+    post 'fail'    => 'global_payments#fail',    as: :global_payments_fail
+  end
 end

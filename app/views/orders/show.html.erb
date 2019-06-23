@@ -15,5 +15,33 @@
   <%= @order.currency %>
 </p>
 
+
+<%= payment_service_for @order.id, Rails.configuration.offsite_payments['global_payments']['merchant_id'],
+           amount: @order.price.to_i,
+           currency: @order.currency,
+           credential2: Rails.configuration.offsite_payments['global_payments']['account'],
+           credential3: Rails.configuration.offsite_payments['global_payments']['shared_secret'],
+           service: :global_payments_offsite do |service| %>
+
+  <% service.customer :first_name => 'Cody',
+                     :last_name => 'Fauser',
+                     :email => 'cody@example.com',
+                     :phone => '44|754480853',
+                     :work_phone => '40|754480853' %>
+
+  <% service.billing_address :city => 'London',
+                            :address1 => '21 Snowy Brook Lane',
+                            :address2 => 'Apt. 36',
+                            :state => 'ON',
+                            :country => 'GB',
+                            :zip => 'K1J1E5' %>
+
+  <% service.notify_url url_for(:only_path => false, :action => 'paid', controller: :global_payments) %>
+  <% service.return_url url_for(:only_path => false, :action => 'success', controller: :global_payments) %>
+  <% service.cancel_return_url 'http://mystore.com' %>
+
+  <%= submit_tag "Pay!", class: 'button blue', style: 'padding-bottom: 3px;' %>
+<% end %>
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

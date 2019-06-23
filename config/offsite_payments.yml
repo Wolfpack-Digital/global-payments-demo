@@ -1,0 +1,5 @@
+global_payments:
+  test_mode: true
+  merchant_id: <%= ENV['MERCHANT_ID'] %>
+  account: <%= ENV['ACCOUNT'] %>
+  shared_secret: <%= ENV['SHARED_SECRET'] %>

@@ -37,6 +37,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
+
+gem 'shopify-money', require: 'money'
+
+gem 'offsite_payments', git: 'git@github.com:Wolfpack-Digital/offsite_payments.git',
+                        ref: '83411339fe2501167b6a14f839c059af4cc1feb2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
