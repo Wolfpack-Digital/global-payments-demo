@@ -14,8 +14,8 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "New Order"
 
-    fill_in "Amount", with: @order.amount
-    fill_in "Curency", with: @order.curency
+    fill_in "Price", with: @order.price
+    fill_in "currency", with: @order.currency
     fill_in "Name", with: @order.name
     click_on "Create Order"
 
@@ -27,8 +27,8 @@ class OrdersTest < ApplicationSystemTestCase
     visit orders_url
     click_on "Edit", match: :first
 
-    fill_in "Amount", with: @order.amount
-    fill_in "Curency", with: @order.curency
+    fill_in "Price", with: @order.price
+    fill_in "currency", with: @order.currency
     fill_in "Name", with: @order.name
     click_on "Update Order"
 

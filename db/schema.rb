@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 2019_06_23_115552) do
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
-    t.float "amount"
-    t.string "curency"
+    t.float "price"
+    t.string "currency"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
