@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Wolfpack-Digital/offsite_payments.git
+  remote: https://github.com/Wolfpack-Digital/offsite_payments.git
   revision: 83411339fe2501167b6a14f839c059af4cc1feb2
   ref: 83411339fe2501167b6a14f839c059af4cc1feb2
   specs:
