@@ -23,10 +23,133 @@
 
   <div class="form-group">
     <%= form.label :currency %>
-    <%= form.text_field :currency, class: "form-control" %>
+    <%= form.select :currency, ['EUR', 'GBP', 'USD'], class: "form-control" %>
+  </div>
+
+  <h3> Customer </h3>
+
+  <div class="form-group">
+    <%= form.label :customer_first_name %>
+    <%= form.text_field :customer_first_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :customer_last_name %>
+    <%= form.text_field :customer_last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :customer_email %>
+    <%= form.text_field :customer_email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :customer_phone %>
+    <%= form.text_field :customer_phone, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :work_phone %>
+    <%= form.text_field :work_phone, class: "form-control" %>
+  </div>
+
+  <h3> Billing address </h3>
+
+
+  <div class="form-group">
+    <%= form.label :billing_address_city %>
+    <%= form.text_field :billing_address_city, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_address_1 %>
+    <%= form.text_field :billing_address_address_1, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_address_2 %>
+    <%= form.text_field :billing_address_address_2, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_address_3 %>
+    <%= form.text_field :billing_address_address_3, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_state %>
+    <%= form.text_field :billing_address_state, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_country %>
+    <%= form.text_field :billing_address_country, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :billing_address_zip %>
+    <%= form.text_field :billing_address_zip, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address_match, 'Billing and shopping address match?' %>
+    <%= form.check_box :address_match, class: "form-control" %>
+  </div>
+
+  <div id="shipping-address">
+    <h3> Shipping address </h3>
+
+
+    <div class="form-group">
+      <%= form.label :shipping_address_city %>
+      <%= form.text_field :shipping_address_city, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_address_1 %>
+      <%= form.text_field :shipping_address_address_1, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_address_2 %>
+      <%= form.text_field :shipping_address_address_2, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_address_3 %>
+      <%= form.text_field :shipping_address_address_3, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_state %>
+      <%= form.text_field :shipping_address_state, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_country %>
+      <%= form.text_field :shipping_address_country, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :shipping_address_zip %>
+      <%= form.text_field :shipping_address_zip, class: "form-control" %>
+    </div>
+
   </div>
 
   <div class="actions">
     <%= form.submit 'Submit', class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+<script>
+
+  document.querySelector('#order_address_match').addEventListener('change', function(event) {
+    const element = document.querySelector("#shipping-address");
+    if (event.target.checked) {
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  })
+</script>
