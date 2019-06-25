@@ -42,7 +42,8 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'shopify-money', require: 'money'
 
 gem 'offsite_payments', git: 'https://github.com/Wolfpack-Digital/offsite_payments.git',
-                        ref: '83411339fe2501167b6a14f839c059af4cc1feb2'
+                        ref: '25ea84cec2eaba59cc801723ab40576191ce6a6d'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

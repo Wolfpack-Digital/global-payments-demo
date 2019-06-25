@@ -38,15 +38,17 @@
                               :country => @order.billing_address_country,
                               :zip => @order.billing_address_zip %>
 
-    <% unless @order.address_match %>
-      <% service.shipping_address :city => @order.shipping_address_city,
-                              :address1 => @order.shipping_address_address_1,
-                              :address2 => @order.shipping_address_address_2,
-                              :address3 => @order.shipping_address_address_3,
-                              :state => @order.shipping_address_state,
-                              :country => @order.shipping_address_country,
-                              :zip => @order.shipping_address_zip %>
-    <% end %>
+    <% service.shipping_address :city => @order.shipping_address_city,
+                            :address1 => @order.shipping_address_address_1,
+                            :address2 => @order.shipping_address_address_2,
+                            :address3 => @order.shipping_address_address_3,
+                            :state => @order.shipping_address_state,
+                            :country => @order.shipping_address_country,
+                            :zip => @order.shipping_address_zip %>
+
+    <% service.addresses_match @order.address_match %>
+
+    <% service.require_shipping @order.require_shipping %>
 
     <% service.notify_url url_for(:only_path => false, :action => 'paid', controller: :global_payments) %>
     <% service.return_url url_for(:only_path => false, :action => 'success', controller: :global_payments) %>
