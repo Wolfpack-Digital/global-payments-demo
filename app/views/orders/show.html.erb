@@ -27,8 +27,7 @@
     <% service.customer :first_name => @order.customer_first_name,
                       :last_name => @order.customer_first_name,
                       :email => @order.customer_email,
-                      :phone => @order.customer_phone,
-                      :work_phone => @order.work_phone %>
+                      :phone => @order.customer_phone %>
 
     <% service.billing_address :city => @order.billing_address_city,
                               :address1 => @order.billing_address_address_1,

@@ -15,7 +15,6 @@ Order.create(
     customer_last_name: 'Ionce',
     customer_email: 'florin@wolfpack-digital.com',
     customer_phone: '44|754480853',
-    work_phone: '44|754480853',
     billing_address_city: 'London',
     billing_address_address_1: 'Abbwey Wood',
     billing_address_address_2: '12',

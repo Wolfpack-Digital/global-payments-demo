@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:name, :price, :currency,
                                   :customer_first_name, :customer_last_name, :customer_email,
-                                  :customer_phone, :work_phone,
+                                  :customer_phone,
                                   :billing_address_city, :billing_address_address_1, :billing_address_address_2,
                                   :billing_address_address_3, :billing_address_state, :billing_address_country,
                                   :billing_address_zip, :shipping_address_city,
