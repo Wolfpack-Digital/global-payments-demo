@@ -78,6 +78,6 @@ class OrdersController < ApplicationController
                                   :billing_address_zip, :shipping_address_city,
                                   :shipping_address_address_1, :shipping_address_address_2, :shipping_address_address_3,
                                   :shipping_address_state, :shipping_address_country, :shipping_address_zip,
-                                  :require_shipping, :address_match)
+                                  :require_shipping, :address_match, :comment)
   end
 end

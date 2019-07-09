@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_02_092144) do
+ActiveRecord::Schema.define(version: 2019_07_09_151002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_07_02_092144) do
     t.string "shipping_address_zip"
     t.boolean "address_match"
     t.boolean "require_shipping", default: true
+    t.text "comment"
   end
 
 end

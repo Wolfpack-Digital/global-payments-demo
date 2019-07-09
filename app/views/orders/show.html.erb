@@ -47,7 +47,9 @@
 
     <% service.addresses_match @order.address_match %>
 
-    <% service.require_shipping @order.require_shipping %>
+    <% service.require_shipping(@order.require_shipping) if @order.require_shipping %>
+
+    <% service.comment @order.comment %>
 
     <% service.notify_url url_for(:only_path => false, :action => 'paid', controller: :global_payments) %>
     <% service.return_url url_for(:only_path => false, :action => 'success', controller: :global_payments) %>

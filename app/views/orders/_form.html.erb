@@ -45,7 +45,12 @@
 
   <div class="form-group">
     <%= form.label :customer_phone %>
-    <%= form.text_field :customer_phone, class: "form-control" %>
+    <%= form.text_field :customer_phone, placeholder: "+40721122853", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, class: "form-control" %>
   </div>
 
   <h3> Billing address </h3>
