@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/Wolfpack-Digital/offsite_payments.git
-  revision: 39d5042dd6488379058499e2fc089f47c62c62a0
-  ref: 39d5042dd6488379058499e2fc089f47c62c62a0
+  revision: 89066c2e913687149e33b7beecf1775d39f0847a
+  ref: 89066c2e913687149e33b7beecf1775d39f0847a
   specs:
     offsite_payments (2.7.13)
       actionpack (>= 5.2.3)

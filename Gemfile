@@ -42,7 +42,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'shopify-money', require: 'money'
 
 gem 'offsite_payments', git: 'https://github.com/Wolfpack-Digital/offsite_payments.git',
-                        ref: '39d5042dd6488379058499e2fc089f47c62c62a0'
+                        ref: '89066c2e913687149e33b7beecf1775d39f0847a'
 
 
 group :development, :test do
