@@ -22,7 +22,7 @@
             currency: @order.currency,
             credential2: Rails.configuration.offsite_payments['global_payments']['account'],
             credential3: Rails.configuration.offsite_payments['global_payments']['shared_secret'],
-            service: :global_payments_offsite do |service| %>
+            service: :realex_offsite do |service| %>
 
     <% service.customer :first_name => @order.customer_first_name,
                       :last_name => @order.customer_first_name,

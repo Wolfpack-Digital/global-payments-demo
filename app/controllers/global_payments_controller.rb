@@ -29,7 +29,7 @@ class GlobalPaymentsController < ApplicationController
 
   def create_notification
     @notification = OffsitePayments
-                    .integration(:global_payments_offsite)
+                    .integration(:realex_offsite)
                     .notification(
                       request.raw_post,
                       credential3: Rails.configuration.offsite_payments['global_payments']['shared_secret']
